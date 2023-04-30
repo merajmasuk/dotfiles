@@ -1,0 +1,4 @@
+# don't add ssh or gpg, your security will be compromised
+.ssh
+.gpg
+.gnupg
