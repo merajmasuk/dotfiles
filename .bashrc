@@ -115,3 +115,21 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+
+# Frank's function
+# This allows you to migrate legacy trusted.gpg to trusted.gpg.d
+# source: https://askubuntu.com/a/1421719/978279
+function apt-key-migrate {
+    typeset key="$1"
+    typeset dest="$2"
+
+    if [ -z "$key" ] || [ -z "$dest" ];
+    then
+        echo "Usage: apt-key-migrate <key> <destination>"
+        return 1
+    fi
+
+    sudo apt-key --keyring /etc/apt/trusted.gpg export $key | sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/$dest.gpg
+    sudo apt-key --keyring /etc/apt/trusted.gpg del $key
+}
