@@ -1,4 +1,7 @@
 
+# Dotfiles
+## _Don't reconfigure everything_
+
 1. Create symlink
 
 ```
