@@ -1,0 +1,8 @@
+# This is Git's per-user configuration file.
+[user]
+	email = merajmasuk@gmail.com
+# Please adapt and uncomment the following lines:
+	name = Meraj al Maksud
+#	email = meraj@pop-os.localdomain
+[init]
+	defaultBranch = main
