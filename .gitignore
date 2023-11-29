@@ -2,3 +2,6 @@
 .ssh
 .gpg
 .gnupg
+
+# residual files
+.Trash

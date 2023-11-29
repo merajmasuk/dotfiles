@@ -2,7 +2,12 @@
 [user]
 	email = merajmasuk@gmail.com
 # Please adapt and uncomment the following lines:
-#	name = Meraj al Maksud
+	name = Meraj al Maksud
 #	email = meraj@pop-os.localdomain
 [init]
 	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
